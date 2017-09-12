@@ -1,16 +1,18 @@
 #pragma once
-#include<stack>
+#include<vector>
 #include "Tile.h"
+#include<time.h>
 
 class Deck
 {
 	public:
 		Deck();
 		~Deck();
-		std::stack<Tile>* getDeck();
+		std::vector<Tile>* getDeck();
 		void removeTile();
 		void print();
+		void shuffle();
 	private:
-		std::stack<Tile>* deck;
+		std::vector<Tile>* deck;
 };
 

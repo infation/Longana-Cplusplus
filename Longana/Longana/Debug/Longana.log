@@ -1,4 +1,4 @@
 ﻿  Deck.cpp
-c:\users\stan\desktop\fall2017\opl\longana\longana\deck.cpp(20): warning C4018: '<': signed/unsigned mismatch
+c:\users\stan\desktop\fall2017\opl\longana\longana\deck.cpp(31): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Longana.vcxproj -> C:\Users\Stan\Desktop\fall2017\opl\Longana\Debug\Longana.exe
   Longana.vcxproj -> C:\Users\Stan\Desktop\fall2017\opl\Longana\Debug\Longana.pdb (Partial PDB)
