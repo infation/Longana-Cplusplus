@@ -1,5 +1,5 @@
 #include "Tile.h"
-#include<iostream>
+
 //Default constructor
 Tile::Tile() {}
 
@@ -20,8 +20,9 @@ void Tile::setTile(unsigned int pip1, unsigned int pip2) {
 	this->pips[1] = pip2;
 }
 
+//To print the tile's contents
 void Tile::printTile() {
-	std::cout << "Tile " << pips[0] << " - " << pips[1]<<std::endl;
+	std::cout << pips[0] << " - " << pips[1]<< "  |  ";
 
 }
 

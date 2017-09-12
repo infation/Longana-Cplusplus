@@ -5,6 +5,7 @@ class Computer :
 {
 public:
 	Computer();
+	void play();
 	~Computer();
 };
 

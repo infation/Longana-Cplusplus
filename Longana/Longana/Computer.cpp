@@ -6,6 +6,9 @@ Computer::Computer()
 {
 }
 
+void Computer::play() {
+
+}
 
 Computer::~Computer()
 {

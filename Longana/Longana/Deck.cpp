@@ -3,28 +3,33 @@
 //Constructor which initializes the deck
 Deck::Deck()
 {
+	//Dynamically allocate
 	deck = new std::vector<Tile>;
+	//Generate the 28 tiles and push it in the deck
 	for (unsigned int i = 0; i < 7; i++) {
 		for (unsigned int j = i; j < 7; j++) {
 			Tile t = Tile(i, j);
 			deck->push_back(t);
 		}
 	}
+	//Shuffle the deck
+	shuffle();
 }
 
+//To remove the last tile
 void Deck::removeTile() {
 	deck->pop_back();
 }
 
+//To print the contents of the deck
 void Deck::print() {
-	shuffle();
 	int size = deck->size();
 	for (int i = 0; i < size ; i++) {
-		Tile t = deck->at(i);
-		t.printTile();
+		deck->at(i).printTile();
 	}
 }
 
+//Function to shuffle the deck before the game starts
 void Deck::shuffle() {
 	
 	//Random seed 
@@ -47,8 +52,16 @@ void Deck::shuffle() {
 
 }
 
+Tile Deck::draw() {
+	Tile t = deck->back();
+	deck->pop_back();
+	return t;
+}
+
+//Getter
 std::vector<Tile>* Deck::getDeck() {
 	return deck;
 }
 
+//Destructor
 Deck::~Deck() { delete deck; }

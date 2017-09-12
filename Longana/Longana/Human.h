@@ -5,6 +5,7 @@ class Human :
 {
 public:
 	Human();
+	void play();
 	~Human();
 };
 

@@ -1,11 +1,12 @@
 #include "Human.h"
 
+Human::Human(){
 
-
-Human::Human()
-{
 }
 
+void Human::play() {
+	
+}
 
 Human::~Human()
 {
