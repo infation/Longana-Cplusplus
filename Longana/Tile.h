@@ -10,6 +10,8 @@ class Tile
 		unsigned int * getTile();
 		void setTile(unsigned int, unsigned int);
 		void printTile();
+		void switchPips();
+		bool isDouble();
 		~Tile();
 	//Private member data
 	private:

@@ -1,8 +1,21 @@
 #pragma once
+#include "Tile.h"
+#include<vector>
+#include<string.h>
+
 class Board
 {
-public:
-	Board();
-	~Board();
+	public:
+		Board();
+		void addToLeft(Tile t);
+		void addToRight(Tile t);
+		void printBoard();
+		bool checkRulesForPlacement(bool isLeft, Tile& t);
+		std::vector<Tile>* getBoardTiles();
+		void setEngine(Tile t);
+		~Board();
+	private:
+		std::vector<Tile>* boardTiles;
+		
 };
 

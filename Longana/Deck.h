@@ -9,7 +9,7 @@ class Deck
 		Deck();
 		~Deck();
 		std::vector<Tile>* getDeck();
-		void removeTile();
+		void removeTile(Tile t);
 		void print();
 		Tile draw();
 		void shuffle();

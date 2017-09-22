@@ -17,8 +17,12 @@ Deck::Deck()
 }
 
 //To remove the last tile
-void Deck::removeTile() {
-	deck->pop_back();
+void Deck::removeTile(Tile t) {
+	for (int i = 0; i < deck->size(); i++) {
+		if (t.getTile()[0] == deck->at(i).getTile()[0] && t.getTile()[1] == deck->at(i).getTile()[1]) {
+			deck->erase(deck->begin() + i);
+		}
+	}
 }
 
 //To print the contents of the deck
