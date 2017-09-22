@@ -28,7 +28,7 @@ void Player::play(Board* board) {
 		std::cin >> choice;
 		switch (choice) {
 			case 1:
-				if (board->checkRulesForPlacement(true,hand->getHand()->at(index))) {
+				if (board->checkRulesForPlacement(true, hand->getHand()->at(index))) {
 					board->addToLeft(hand->getHand()->at(index));
 				}
 				else {
@@ -47,14 +47,15 @@ void Player::play(Board* board) {
 	}
 	else {
 		if (board->checkRulesForPlacement(true, hand->getHand()->at(index))) {
-			std::cout << "Invalid Move! ";
+			board->addToLeft(hand->getHand()->at(index));
+			hand->removeFromHand(index);
 		}
 		else {
-			board->addToLeft(hand->getHand()->at(index));
+			std::cout << "Invalid Move! ";
 		}
 	}
 
-	hand->removeFromHand(index);
+	
 	std::cout << "\n\n";
 }
 

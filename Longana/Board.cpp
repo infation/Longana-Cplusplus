@@ -12,11 +12,11 @@ Board::Board()
 bool Board::checkRulesForPlacement(bool isLeft, Tile& t) {
 	//If the players are adding a tile on the left side of the board
 	if (isLeft) {
-		if (boardTiles->at(0).getTile()[0] == t.getTile()[0] || boardTiles->at(0).getTile()[1] == t.getTile()[1]){
+		if (boardTiles->at(0).getTile()[0] == t.getTile()[1]){
 			return true;
 		}
 		//Check the reversed pips and the switch the pips for that specific tile
-		else if (boardTiles->at(0).getTile()[0] == t.getTile()[1] || boardTiles->at(0).getTile()[1] == t.getTile()[0]) {
+		else if (boardTiles->at(0).getTile()[0] == t.getTile()[0]) {
 			t.switchPips();
 			return true;
 		}
@@ -26,12 +26,12 @@ bool Board::checkRulesForPlacement(bool isLeft, Tile& t) {
 	}
 	//If the players are adding a tile on the right side of the board
 	else {
-		int size = boardTiles->size();
-		if (boardTiles->at(size).getTile()[0] == t.getTile()[0] || boardTiles->at(size).getTile()[1] == t.getTile()[1]) {
+		int size = boardTiles->size() - 1 ;
+		if (boardTiles->at(size).getTile()[1] == t.getTile()[0]) {
 			return true;
 		}
 		//Check the reversed pips and the switch the pips for that specific tile
-		else if (boardTiles->at(size).getTile()[0] == t.getTile()[1] || boardTiles->at(size).getTile()[1] == t.getTile()[0]) {
+		else if (boardTiles->at(size).getTile()[1] == t.getTile()[1]) {
 			t.switchPips();
 			return true;
 		}
